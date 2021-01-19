@@ -11,9 +11,15 @@ WriteMakefile(
     AUTHOR => 'Gisle Aas <gisle@activestate.com>',
     LICENSE => "perl",
     MIN_PERL_VERSION => 5.008001,
+    CONFIGURE_REQUIRES => {
+        'ExtUtils::Makemaker' => 6.56,
+    },
     PREREQ_PM => {
         'AnyDBM_File' => 0,
         'Fcntl' => 0,
+        'URI' => "1.10",
+    },
+    BUILD_REQUIRES => {
         'URI' => "1.10",
     },
     META_MERGE => {
